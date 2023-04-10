@@ -22,12 +22,12 @@ contexts:
             - match: "#"
               scope: invalid.illegal.bad-comments-or-CDATA.html.tintin
 
-        - match: '{{#'
+        - match: '{##'
           captures:
             0: punctuation.definition.comment.begin.tintin
           push:
             - meta_scope: comment.block.html.tintin
-            - match: '#}}'
+            - match: '##}'
               scope: punctuation.definition.comment.end.tintin
               pop: true
             - match: "#"
