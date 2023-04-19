@@ -100,7 +100,7 @@ contexts:
             pop: true
           - include: 'scope:source.php'
 
-        - match: '(\s{0}|^)(\#|\%)\b(auth|stop|jump|elseif|extends|for|loop|guest|if|isset|includeif||includewhen|php|block|unless|while|inject|verbatim)\b(?=(|\s*|)\(\()'
+        - match: '(\s{0}|^)(\#|\%)\b(auth|stop|jump|elseif|elif|extends|for|loop|guest|if|isset|includeIf||includeWhen|php|block|unless|while|inject|verbatim|macro|import|env|production|class|hasflash|flash|empty|json|lang|notempty|raw)\b(?=(|\s*|)\(\()'
           captures:
             0: punctuation.section.embedded.php
             2: constant.other.inline-data.html
@@ -112,7 +112,7 @@ contexts:
               pop: true
             - include: 'scope:source.php'
 
-        - match: '(\s{0}|^)(\#|\%)\b(auth|stop|jump|elseif|extends|for|loop|guest|if|isset|include|includeif||includewhen|php|block|unless|while|inject|verbatim)\b(?=(|\s*|)\()'
+        - match: '(\s{0}|^)(\#|\%)\b(auth|stop|jump|elseif|else|elif|extends|for|loop|guest|if|isset|includeIf||includeWhen|php|block|unless|while|inject|verbatim|macro|import|env|production|class|hasflash|flash|empty|json|lang|notempty|raw)\b(?=(|\s*|)\()'
           captures:
             0: punctuation.section.embedded.php
             2: constant.other.inline-data.html
@@ -124,7 +124,7 @@ contexts:
               pop: true
             - include: 'scope:source.php'
 
-        - match: '(\s{0}|^)(\#|\%)\b(auth|stop|jump|else|empty|endauth|endlang|endguest|endempty|endfor|endloop|endif|endisset|endblock|endunless|endwhile|endphp|endverbatim)\b'
+        - match: '(\s{0}|^)(\#|\%)\b(stop|jump|else|endempty|endauth|endauth|endlang|endguest|endfor|endloop|endif|endisset|endblock|endunless|endwhile|endphp|endverbatim|endhasflash|endguest|endlang|endproduction|endenv|endunlang|endnotempty|endmacro|endraw)\b'
           scope: custom.compiler.tintin.php
           captures:
             0: punctuation.section.embedded.php
